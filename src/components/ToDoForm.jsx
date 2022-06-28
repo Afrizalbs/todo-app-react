@@ -1,21 +1,18 @@
-import React, { useState } from "react";
 import ButtonFunction from "./ButtonFunction";
 import "./todo-form.css";
 
-function ToDoForm({ onClick }) {
-  const [form, setForm] = useState("");
-
+function ToDoForm({ onClick, onChange, value }) {
   return (
     <div className="todo-form">
       <h3>Write your daily task</h3>
-      <p>i want to: {form}</p>
       <input
         type="text"
+        value={value}
         onChange={(event) => {
-          setForm(event.target.value);
+          onChange(event.target.value);
         }}
       />
-      <ButtonFunction text="Enter" onClick={() => onClick(form)} />
+      <ButtonFunction text="Enter" onClick={() => onClick()} />
     </div>
   );
 }
