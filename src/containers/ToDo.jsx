@@ -4,14 +4,20 @@ import ToDoList from "../components/ToDoList";
 import "./ToDo.css";
 function ToDo() {
   const [todos, setTodos] = useState([]);
+  const [form, setForm] = useState("");
 
-  const handleClick = (todo) => {
-    setTodos([...todos, todo]);
+  const handleClick = () => {
+    setTodos([...todos, form]);
+    setForm("");
+  };
+
+  const handleForm = (todo) => {
+    setForm(todo);
   };
   return (
     <div className="todo-container">
       <h1>ToDo App</h1>
-      <ToDoForm onClick={handleClick} />
+      <ToDoForm onClick={handleClick} onChange={handleForm} value={form} />
       <ToDoList activities={todos} />
     </div>
   );
