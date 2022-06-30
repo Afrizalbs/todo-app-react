@@ -1,11 +1,12 @@
 .todo-container {
-    background-color:cyan;
+    background-color:white;
     padding: 50px;
     border-radius: 15px;
+    width: 500px;
 }
 
 h1 {
-    color: darkblue;
+    color: darkslateblue;
     margin-bottom: 20px;
     text-align: center;
 }

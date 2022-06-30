@@ -1,0 +1,14 @@
+h3 {
+    color: darkslateblue;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    padding: 5px;
+}
+
+.isComplete {
+    text-decoration: line-through;
+}
